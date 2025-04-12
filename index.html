@@ -1,187 +1,244 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page - BONUS DE BIENVENIDA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plataforma Verificada | BC online</title>
+  <link rel="icon" type="image/png" href="http://imgfz.com/i/gG8bTM6.jpeg" />
 
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s) {
-            if(f.fbq) return; n=f.fbq=function(){n.callMethod ?
-            n.callMethod.apply(n, arguments) : n.queue.push(arguments)};
-            if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
-            n.queue=[]; t=b.createElement(e); t.async=!0;
-            t.src=v; s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)
-        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1081495460474146'); // Pixel de Meta
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1081495460474146&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Meta Pixel Code -->
+  <!-- ✅ PIXEL DE META -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src='https://connect.facebook.net/en_US/fbevents.js';
+    s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script');
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-        }
+    fbq('init', '1081495460474146'); // 👈 Nuevo píxel
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1081495460474146&ev=PageView&noscript=1"/>
+  </noscript>
 
-        body {
-            background-color: #ffffff;
-            color: #111b21;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        .container {
-            text-align: center;
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+    body {
+      background-color: #ffffff; /* Fondo blanco */
+      color: #111b21; /* Texto oscuro */
+    }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+    header {
+      padding: 20px;
+      text-align: center;
+    }
 
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
+    header img {
+      height: 40px;
+    }
 
-        .whatsapp-logo {
-            width: 50px;
-            margin-bottom: 20px;
-        }
+    main {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
 
-        .cta-button {
-            background-color: #25d366; /* Color de WhatsApp */
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
+    .logo-circle {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
 
-        .cta-button:hover {
-            background-color: #128c7e; /* Color más oscuro al pasar el cursor */
-        }
+    .logo-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        footer {
-            text-align: center;
-            font-size: 13px;
-            color: #999;
-            margin-top: 60px;
-            padding-bottom: 80px;
-        }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      color: #111b21; /* Texto oscuro */
+    }
 
-        /* Estilos para las notificaciones */
-        .xpo-notification-wrap {
-            position: fixed;
-            background: #1e1e1e;
-            color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            padding: 10px 14px;
-            display: flex;
-            align-items: center;
-            width: 280px;
-            z-index: 9999;
-            border: 1px solid #333;
-            backdrop-filter: blur(6px);
-            opacity: 0;
-            left: -300px;
-            bottom: 100px;
-            transition: all 0.5s ease;
-        }
+    h2 {
+      color: #25d366; /* Verde para subtítulos */
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
 
-        .xpo-notification-wrap.show {
-            left: 20px;
-            opacity: 1;
-        }
+    .cta-button {
+      background-color: #25d366; /* Verde del botón */
+      color: white;
+      padding: 18px 40px; /* Botón más grande */
+      font-size: 18px; /* Texto más grande */
+      font-weight: bold;
+      border: none;
+      border-radius: 30px; /* Botón más redondeado */
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 20px; /* Espacio entre botón y la caja */
+      animation: pulse 1.5s infinite;
+      cursor: pointer;
+    }
 
-        .xpo-img-wrap img {
-            width: 42px;
-            height: 42px;
-            border-radius: 6px;
-            object-fit: cover;
-            border: 1px solid #444;
-        }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
 
-        .xpo-col {
-            margin-left: 12px;
-        }
+    .cta-box {
+      background-color: #ffffff; /* Fondo blanco */
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: #111b21; /* Texto oscuro */
+      border: 1px solid #dddddd; /* Borde gris claro */
+    }
 
-        .xpo-notification-name {
-            font-weight: bold;
-            font-size: 0.9em;
-            color: #fff;
-        }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+      margin-top: 60px;
+      padding-bottom: 80px;
+    }
 
-        .xpo-notification-product {
-            font-size: 0.85em;
-            color: #22d3ee;
-        }
+    /* Notificaciones */
+    .xpo-notification-wrap {
+      position: fixed;
+      background: #f9f9f9; /* Fondo claro */
+      color: #111b21; /* Texto oscuro */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      width: 220px; /* Más pequeño */
+      z-index: 9999;
+      border: 1px solid #dddddd; /* Borde gris claro */
+      backdrop-filter: blur(4px);
+      opacity: 0;
+      right: -300px; /* Posición inicial */
+      bottom: 20px; /* Más cerca del borde inferior */
+      transition: all 0.5s ease;
+    }
 
-        .xpo-location {
-            font-size: 0.75em;
-            color: #cbd5e1;
-        }
+    .xpo-notification-wrap.show { right: 20px; opacity: 1; } /* Mostrar en la derecha */
+    .xpo-img-wrap img {
+      width: 36px; /* Tamaño reducido */
+      height: 36px;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid #cccccc; /* Borde claro */
+    }
 
-        .xpo-location::before {
-            content: "📍";
-            margin-right: 4px;
-        }
-
-    </style>
+    .xpo-col { margin-left: 10px; }
+    .xpo-notification-name { font-weight: bold; font-size: 0.9em; color: #111b21; }
+    .xpo-notification-product { font-size: 0.8em; color: #25d366; }
+    .xpo-location { font-size: 0.75em; color: #555555; }
+    .xpo-location::before { content: "📍"; margin-right: 4px; }
+  </style>
 </head>
-
 <body>
-    <!-- Contenedor principal -->
-    <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" class="whatsapp-logo">
 
-        <!-- Título actualizado -->
-        <h1>🎰BONUS DEL 50% ACTIVO 🎰</h1>
+  <header>
+    <img src="https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg" alt="WhatsApp" />
+  </header>
 
-        <!-- Subtítulo actualizado -->
-        <p>🏆 Encuentra los mejores Slots y atención 24 horas 🏆</p>
-
-        <!-- Botón de llamada a la acción -->
-        <a href="https://wa.link/redgreent" class="cta-button" target="_blank" onclick="fbq('track', 'Contact');">CHATEAR EN WHATSAPP</a>
+  <main>
+    <div class="logo-circle">
+      <img src="https://i.imgur.com/G09ydIs.jpeg" alt="Nueva Imagen" />
     </div>
 
-    <!-- Barra fija -->
-    <div class="bono-bar" style="position: fixed; bottom: 0; left: 0; width: 100%; background-color: #16a34a; color: white; text-align: center; padding: 10px; font-weight: bold;">
-        🎁Tu usuario GRATIS y al instante🎁
-    </div>
+    <h1>BONUS DEL 50%🎁</h1>
+    <h2>CARGAS 2.000 RECIBIS 3.000🍀</h2>
 
-    <!-- Pie de página -->
-    <footer>
-     © 2025 RedGreen todos los derechos reservados.
-    </footer>
+    <!-- Botón de llamado a la acción -->
+    <a href="https://wa.link/redgreent" 
+       class="cta-button" 
+       onclick="fbq('track', 'Lead');">
+       Ir a WhatsApp Ahora
+    </a>
+
+    <!-- Caja de texto -->
+    <div class="cta-box">
+      Te estamos conectando con nuestro equipo vía WhatsApp.
+    </div>
+  </main>
+
+  <footer>
+    © 2025 BC ONLINE. Todos los derechos reservados.
+  </footer>
+
+  <!-- Script de Notificaciones -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const config = {
+        intervalo: 3,
+        duracion: 3,
+        tiempoMaximo: 2,
+        productName: "Premios Enviados🍀",
+        productImage: "https://i.imgur.com/Oyx38be.jpeg" /* Imagen de notificaciones */
+      };
+
+      const nombres = ["Silvina Santos", "Juan Rodriguez", "Carlos Alvidia", "Laura Montes", "Lucio Avalos"];
+      const ciudades = ["Buenos Aires", "Córdoba", "Entre Rios", "Tucuman", "Buenos Aires"];
+
+      function getRandom(arr) {
+        return arr[Math.floor(Math.random() * arr.length)];
+      }
+
+      function getTimeAgo() {
+        const h = Math.floor(Math.random() * config.tiempoMaximo);
+        const m = Math.floor(Math.random() * 60);
+        return h === 0 ? `hace ${m} minutos` : `hace ${h} hora${h > 1 ? 's' : ''}`;
+      }
+
+      function showNotification() {
+        const nombre = getRandom(nombres);
+        const ciudad = getRandom(ciudades);
+        const tiempo = getTimeAgo();
+
+        const noti = document.createElement("div");
+        noti.className = "xpo-notification-wrap";
+        noti.innerHTML = `
+          <div class="xpo-img-wrap">
+            <img src="${config.productImage}" alt="Premio">
+          </div>
+          <div class="xpo-col">
+            <div class="xpo-notification-name">${nombre}</div>
+            <div class="xpo-notification-product">${config.productName}</div>
+            <div class="xpo-location">Desde ${ciudad} • ${tiempo}</div>
+          </div>
+        `;
+        document.body.appendChild(noti);
+        setTimeout(() => noti.classList.add("show"), 100);
+        setTimeout(() => {
+          noti.classList.remove("show");
+          setTimeout(() => noti.remove(), 500);
+        }, config.duracion * 1000);
+      }
+
+      showNotification();
+      setInterval(showNotification, config.intervalo * 1000);
+    });
+  </script>
+
 </body>
-
 </html>
